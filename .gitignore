@@ -1,3 +1,4 @@
+*.gradle
 *.java.hsp
 *.sonarj
 *.sw*
