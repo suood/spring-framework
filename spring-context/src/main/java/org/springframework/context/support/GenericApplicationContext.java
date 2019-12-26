@@ -17,6 +17,7 @@
 package org.springframework.context.support;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.lang.reflect.Constructor;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.Supplier;
@@ -109,8 +110,8 @@ public class GenericApplicationContext extends AbstractApplicationContext implem
 	 * @see #refresh
 	 */
 	public GenericApplicationContext() {
-		this.beanFactory = new DefaultListableBeanFactory();
-	}
+		this.beanFactory = new DefaultListableBeanFactory(); //创建功能最齐全的BeanFactory  
+	}                   //DefaultListableBeanFactory  extends AbstractAutowireCapableBeanFactory implements ConfigurableListableBeanFactory, BeanDefinitionRegistry, Serializable
 
 	/**
 	 * Create a new GenericApplicationContext with the given DefaultListableBeanFactory.

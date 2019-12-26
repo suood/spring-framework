@@ -32,12 +32,12 @@ public interface AnnotationConfigRegistry {
 	 * @param componentClasses one or more component classes,
 	 * e.g. {@link Configuration @Configuration} classes
 	 */
-	void register(Class<?>... componentClasses);
+	void register(Class<?>... componentClasses);  //注册指定的类
 
 	/**
 	 * Perform a scan within the specified base packages.
 	 * @param basePackages the packages to scan for component classes
 	 */
-	void scan(String... basePackages);
+	void scan(String... basePackages);    //扫描指定的包 @ComponentScan basePackages ？
 
 }
