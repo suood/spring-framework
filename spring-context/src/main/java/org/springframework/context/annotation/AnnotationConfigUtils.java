@@ -235,7 +235,7 @@ public abstract class AnnotationConfigUtils {
 	}
 
 	static void processCommonDefinitionAnnotations(AnnotatedBeanDefinition abd, AnnotatedTypeMetadata metadata) {
-		AnnotationAttributes lazy = attributesFor(metadata, Lazy.class);
+		AnnotationAttributes lazy = attributesFor(metadata, Lazy.class); //是否懒加栽
 		if (lazy != null) {
 			abd.setLazyInit(lazy.getBoolean("value"));
 		}
